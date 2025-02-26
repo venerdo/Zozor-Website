@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "BallparkWeiner";
+    src: url("polices/ballpark.eot");
+    src: url("polices/ballpark.eot?#iefix") format("embedded-opentype"), url("polices/ballpark.woff") format("woff"),
+      url("polices/ballpark.ttf") format("truetype"), url("polices/ballpark.svg#BallparkWeiner") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Dayrom";
+    src: url("polices/dayrom.eot");
+    src: url("polices/dayrom.eot?#iefix") format("embedded-opentype"), url("polices/dayrom.woff") format("woff"),
+      url("polices/dayrom.ttf") format("truetype"), url("polices/dayrom.svg#Dayrom") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    background: url("images/fond_jaune.png");
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #0c090a;
+  }
+  
+  h1,
+  h2 {
+    font-family: Dayrom;
+    font-weight: normal;
+    font-size: 1.06rem;
+  }
+h1{
+    margin: 0;
+}
+  
+h2 {
+    text-transform: uppercase;
+}
+
+article > h2 { /*This selector targets only the <h2> elements that are direct children of an <article> element.*/
+  display: flex;
+  align-items: center;/*this put the img and span at the same level verticaly*/
+  /*justify-content: center; /* This centers the content horizontally */
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+/* This selector targets <span> elements that are direct children of <h2> elements within an <article> element.
+  This style will only apply if the <span> is a direct child of an <h2> within an <article>  */
+article > h2 > span {
+    margin-left: 1rem;
+}
+
+p{
+  text-align: justify;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul > li {
+    display: inline-block;
+}
+
+/* This selector targets the header, section, div with id article-section, and footer elements */
+header,
+section,
+div#article-section, /* Targets the div element with the id article-section */
+footer {
+    display: flex; /* Applies flexbox layout to these elements */
+    margin:auto; /* Centers the elements horizontally */
+    padding: 0 1.2rem; /* Adds padding of 1.2rem to the left and right */
+    max-width: 68rem; /* Sets the maximum width of these elements to 68rem */
+}
+
+footer{
+    margin-top: 1rem;
+    overflow: auto;
+} 
+/*reanalyze*/
+div.separator{
+  height: 3px;
+  margin: 0.8rem -0.5rem;
+  background: url(images/separateur.png) repeat-x;
+  text-align: center;/*This center the image to go up to the page*/
+}
+
+div.separator-shadow {
+  margin: -0.8rem -0.5rem;
+  height: 14px;
+  background: url(images/ombre.png) repeat-x;
+}
+
+a#red-link{
+  color: #89201d;
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  padding: 0 0.8rem;
+}
+
+span#zozor{
+  position: relative;
+  top: 0.6rem;
+  font-family: BallparkWeiner;
+  font-size: 2rem;
+}
+
+header  nav {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+header nav > ul {
+   margin-bottom: 0; 
+}
+
+header > nav > ul> li{
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+} 
+
+header nav > ul > li > a {
+  display: inline-block;
+  height: 1.28rem;
+  color: #0c090a;
+  text-decoration: none;
+  font-family: Dayrom;
+  font-weight: normal;
+  font-size: 1.08rem;
+}
+
+/* This selector targets the first <li> element within a <ul> inside a <nav> within a <header>, and applies styles to the <a> element within that <li> */
+header > nav > ul > li:first-child  a {
+  /* Adds top margin to the first navigation link 
+  margin-top: 1.2rem; 
+  /* Adds bottom margin to the first navigation link 
+  margin-bottom: 2.2rem; */
+  color: #89201d;
+  border-bottom: 0.12rem solid #89201d;
+}
+
+section#banner {
+  margin-top: 1.2rem;
+  margin-bottom: 2.2rem;
+}
+
+section#banner > div {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  /* Adds a subtle shadow effect to the element, giving it a slightly elevated appearance */
+  box-shadow: 1px 1px 5px #303030;
+  margin: auto;
+}
+
+section#banner > div > img {
+  display: block;
+  max-width: 100%;
+}
+
+div#banner-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.6rem;
+  color: white;
+  font-size: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+div#banner-footer > a {
+  margin-left: auto;
+  color: inherit;
+  text-decoration: none;
+  background: url(images/fond_degraderouge.png);
+  padding: 0.36rem 0.75rem;
+  border-radius: 0.45rem;
+}
+
+div#banner-footer > a:after{
+  position: relative;
+  top: 0.06rem;
+  content: url(images/flecheblanchedroite.png);
+  margin-left: 0.45rem;
+}
+
+div#banner-footer > h3{
+  /*font-weight: normal;*/
+  margin: 0;
+}
+
+div#article-section{
+  margin: 1.6rem auto;
+}
+
+article {
+  margin-right: 1.8rem;
+}
+
+aside {
+  background-color: #706b64;
+  border-radius: 0.4rem;
+  box-shadow: 1px 1px 5px #303030;
+  color: lightgrey;
+  position: relative;
+  align-self: flex-start;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+aside > p {
+  font-size: 0.8rem;
+}
+
+aside > ul {
+   display: flex;
+   text-align: center;
+   justify-content: center;
+}
+
+aside > ul > li:not(:last-child){
+  margin-right: 0.3rem;
+}
+
+img#infobulle{
+  position: absolute;
+  left: -12px;
+  top: 33%;
+}
+
