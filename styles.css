@@ -235,3 +235,120 @@ left: -12px;
 top: 33%;
 }
 
+footer {
+  display: flex;
+  justify-content: space-beteen;
+}
+
+footer > div {
+  flex: 1 0 0;
+}
+
+footer img {
+  border: 1px solid #0c090a;
+  box-shadow: 0.5px 0.5px 2.5px #303030;
+}
+
+div#amis {
+  display: flex;
+  font-size: 0.75rem;
+}
+
+div#amis > ul:first-child {
+  margin-right: 4rem;
+}
+
+div#amis > ul > li {
+  display: block;
+  white-space: nowrap;
+}
+
+div#amis > ul > li > a {
+  color: #89201d;
+  text-decoration: none;
+}
+
+div#amis > ul > li > a:before {
+  content: url("images/ico_liensexterne.png");
+  margin-right: 0.36rem;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  aside > img:first-of-type {
+    float: right;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  header > nav > ul > li {
+    display: block;
+  }
+
+  section#banner,
+  img#infobulle {
+    display: none;
+  }
+
+  div#article-section {
+    flex-direction: column;
+  }
+
+  article {
+    margin-right: 0;
+  }
+
+  aside {
+    align-self: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  aside > h2 {
+    margin-bottom: 1.2rem;
+  }
+
+  aside > ul {
+    padding-top: 1rem;
+    clear: right;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
+  footer h2 {
+    text-align: center;
+  }
+
+  footer > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer > div ul {
+    margin: auto;
+    padding-bottom: 1rem;
+  }
+
+  footer > div > p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0;
+  }
+
+  footer > div:not(:last-child) {
+    border-bottom: 1px solid #89201d;
+  }
+}
+
+@media (max-width: 991.98px) {
+  footer > div:nth-child(2) {
+    margin: 0 1.5rem;
+  }
+}
